@@ -20,6 +20,7 @@ public class Main {
                 .count();
 
         List<String> surnamesOfСonscripts = persons.stream()
+                .filter(person -> person.getSex() == Sex.MAN)
                 .filter(person -> person.getAge() >= 18)
                 .filter(person -> person.getAge() < 27)
                 .map(Person::getFamily)
